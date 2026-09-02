@@ -971,4 +971,110 @@
                         ${p.oldPrice ? `<span class="price-old">$${p.oldPrice.toLocaleString()}</span>` : ''}
                         <span class="rating">${stars}</span>
                     </div>
-               
+                </div>
+                <div class="product-footer">
+                    <button class="add-btn" data-id="${p.id}"><i class="fas fa-cart-plus"></i> Add</button>
+                    <button class="wish-btn" aria-label="wishlist"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        `}).join('');
+
+        // attach add listeners
+        document.querySelectorAll('.add-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = Number(btn.dataset.id);
+                addToCart(id);
+            });
+        });
+    }
+
+    function filterProducts(query) {
+        const q = String(query).trim().toLowerCase();
+        if (!q) { renderProducts(PRODUCTS); return; }
+        const filtered = PRODUCTS.filter(p => p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
+        renderProducts(filtered);
+    }
+
+    // ---- cart ----
+    function addToCart(id) {
+        const p = PRODUCTS.find(x => x.id === id);
+        if (!p) return;
+        cartCount++;
+        cartCountEl.textContent = cartCount;
+        // feedback
+        const btn = document.querySelector(`.add-btn[data-id="${id}"]`);
+        if (btn) {
+            const orig = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Added';
+            btn.disabled = true;
+            setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 1000);
+        }
+    }
+
+    // ---- search ----
+    searchBtn.addEventListener('click', () => filterProducts(searchInput.value));
+    searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') filterProducts(searchInput.value); });
+
+    // ---- mobile menu ----
+    mobileToggle.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // ---- newsletter ----
+    document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail').value.trim();
+        const msg = document.getElementById('newsletterMsg');
+        if (!email || !email.includes('@')) {
+            msg.style.display = 'block';
+            msg.textContent = 'Please enter a valid email.';
+            msg.style.color = '#f4a261';
+            return;
+        }
+        msg.style.display = 'block';
+        msg.textContent = '🎉 You’re subscribed!';
+        msg.style.color = '#b8e0d4';
+        document.getElementById('newsletterEmail').value = '';
+        setTimeout(() => msg.style.display = 'none', 3000);
+    });
+
+    // ---- deal timer ----
+    (function setupDealTimer() {
+        const target = new Date(Date.now() + (24 * 60 + 36) * 60 * 1000);
+        function tick() {
+            const diff = Math.max(0, target - new Date());
+            const days = Math.floor(diff / (24 * 3600 * 1000));
+            const hours = Math.floor((diff % (24 * 3600 * 1000)) / (3600 * 1000));
+            const mins = Math.floor((diff % (3600 * 1000)) / (60 * 1000));
+            const secs = Math.floor((diff % (60 * 1000)) / 1000);
+            document.getElementById('dealDays').textContent = days;
+            document.getElementById('dealHours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('dealMinutes').textContent = String(mins).padStart(2, '0');
+            document.getElementById('dealSeconds').textContent = String(secs).padStart(2, '0');
+            if (diff <= 0) clearInterval(interval);
+        }
+        tick();
+        const interval = setInterval(tick, 1000);
+    })();
+
+    // ---- UI actions ----
+    document.getElementById('shopNow').addEventListener('click', () => {
+        document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('exploreDeals').addEventListener('click', () => {
+        document.getElementById('deals').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('buyDeal').addEventListener('click', () => {
+        cartCount++;
+        cartCountEl.textContent = cartCount;
+        alert('⚡ Deal added to cart!');
+    });
+
+    // ---- init ----
+    renderCategories();
+    renderProducts(PRODUCTS);
+    document.getElementById('year').textContent = new Date().getFullYear();
+    cartCountEl.textContent = cartCount;
+</script>
+</body>
+</html>
