@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍗 Crispy Coop · chicken snacks</title>
+    <title>🐔 Cluck & Crisp · chicken snack store</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,7 +16,7 @@
 
         body {
             font-family: "Inter", system-ui, sans-serif;
-            background: #fefbf7;
+            background: #fefcf5;
             color: #2d2a24;
             line-height: 1.5;
             padding: 0 1rem;
@@ -28,24 +28,24 @@
             padding: 0 1rem;
         }
 
-        /* warm, friendly palette */
+        /* warm, crispy colour palette */
         :root {
-            --gold: #d48c3b;
-            --gold-light: #f7e8d0;
-            --cream: #faf1e4;
-            --dark: #3e3329;
-            --accent: #c97d2e;
-            --white: #ffffff;
-            --shadow: 0 12px 28px rgba(80, 50, 20, 0.07);
-            --radius: 2rem;
+            --chicken-gold: #d48c3b;
+            --chicken-crisp: #f7e8d0;
+            --chicken-skin: #faf1e4;
+            --chicken-dark: #3e3329;
+            --chicken-accent: #c97d2e;
+            --chicken-card: #ffffff;
+            --chicken-shadow: 0 12px 28px rgba(80, 50, 20, 0.07);
+            --chicken-radius: 2rem;
         }
 
         /* ===== header ===== */
         .header {
-            background: rgba(255, 252, 245, 0.94);
+            background: rgba(255, 252, 245, 0.92);
             backdrop-filter: blur(6px);
-            border-bottom: 1px solid rgba(212, 140, 59, 0.12);
-            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(212, 140, 59, 0.15);
+            padding: 0.5rem 0;
             position: sticky;
             top: 0;
             z-index: 50;
@@ -56,7 +56,7 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 0.5rem 1rem;
+            gap: 0.6rem 1rem;
         }
 
         .brand {
@@ -64,39 +64,40 @@
             align-items: center;
             gap: 0.4rem;
             font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--dark);
+            font-size: 1.6rem;
+            color: var(--chicken-dark);
+            letter-spacing: -0.02em;
         }
 
         .brand i {
-            color: var(--gold);
-            font-size: 1.7rem;
+            color: var(--chicken-gold);
+            font-size: 1.8rem;
         }
 
         .brand span {
-            color: var(--gold);
+            color: var(--chicken-gold);
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 0.2rem 1rem;
+            gap: 0.2rem 1.2rem;
             flex-wrap: wrap;
         }
 
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            color: var(--dark);
-            padding: 0.3rem 0.8rem;
+            color: var(--chicken-dark);
+            padding: 0.4rem 0.8rem;
             border-radius: 3rem;
             transition: all 0.15s ease;
             font-size: 0.95rem;
         }
 
         .nav-links a:hover {
-            background: var(--gold-light);
-            color: var(--accent);
+            background: var(--chicken-crisp);
+            color: var(--chicken-accent);
         }
 
         .nav-links a i {
@@ -106,7 +107,7 @@
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 0.4rem 0.8rem;
+            gap: 0.5rem 0.8rem;
             flex-wrap: wrap;
         }
 
@@ -115,14 +116,15 @@
             align-items: center;
             background: white;
             border-radius: 3rem;
-            padding: 0.15rem 0.15rem 0.15rem 1rem;
+            padding: 0.2rem 0.2rem 0.2rem 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
             border: 1px solid #eddcc8;
             transition: 0.15s ease;
         }
 
         .search-wrap:focus-within {
-            border-color: var(--gold);
-            box-shadow: 0 4px 14px rgba(212, 140, 59, 0.10);
+            border-color: var(--chicken-gold);
+            box-shadow: 0 4px 14px rgba(212, 140, 59, 0.12);
         }
 
         .search-wrap input {
@@ -130,15 +132,15 @@
             background: transparent;
             padding: 0.5rem 0;
             font-size: 0.9rem;
-            width: 130px;
+            width: 140px;
             outline: none;
         }
 
         .search-wrap button {
-            background: var(--gold);
+            background: var(--chicken-gold);
             border: none;
             color: white;
-            padding: 0.35rem 1rem;
+            padding: 0.4rem 1rem;
             border-radius: 3rem;
             font-weight: 500;
             cursor: pointer;
@@ -153,25 +155,25 @@
             background: transparent;
             border: none;
             font-size: 1.2rem;
-            color: var(--dark);
+            color: var(--chicken-dark);
             cursor: pointer;
-            padding: 0.3rem 0.5rem;
+            padding: 0.3rem 0.6rem;
             border-radius: 2rem;
             transition: 0.15s ease;
             position: relative;
         }
 
         .icon-btn:hover {
-            background: var(--gold-light);
-            color: var(--accent);
+            background: var(--chicken-crisp);
+            color: var(--chicken-accent);
         }
 
         .cart-badge {
-            background: var(--accent);
+            background: var(--chicken-accent);
             color: white;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            padding: 0.1rem 0.45rem;
+            padding: 0.1rem 0.5rem;
             border-radius: 2rem;
             position: absolute;
             top: -6px;
@@ -183,7 +185,7 @@
             background: transparent;
             border: none;
             font-size: 1.6rem;
-            color: var(--dark);
+            color: var(--chicken-dark);
             cursor: pointer;
         }
 
@@ -197,7 +199,7 @@
         .mobile-menu a {
             display: block;
             padding: 0.5rem 0;
-            color: var(--dark);
+            color: var(--chicken-dark);
             text-decoration: none;
             font-weight: 500;
             border-bottom: 1px solid #f5ede4;
@@ -206,50 +208,50 @@
         /* ===== hero ===== */
         .hero {
             background: linear-gradient(145deg, #f7ede0 0%, #f3e2ce 100%);
-            border-radius: var(--radius);
-            padding: 2.2rem 2rem;
-            margin: 1.4rem 0 2rem;
+            border-radius: var(--chicken-radius);
+            padding: 2.5rem 2rem;
+            margin: 1.6rem 0 2.2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            gap: 1.8rem;
         }
 
         .hero-content {
-            flex: 1 1 260px;
+            flex: 1 1 280px;
         }
 
         .hero-content h1 {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--chicken-dark);
             line-height: 1.2;
         }
 
         .hero-content h1 i {
-            color: var(--gold);
+            color: var(--chicken-gold);
             margin-right: 0.3rem;
         }
 
         .hero-content p {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #4f4033;
-            max-width: 420px;
-            margin: 0.5rem 0 1.4rem;
+            max-width: 440px;
+            margin: 0.6rem 0 1.6rem;
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.7rem;
+            gap: 0.8rem;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.65rem 1.8rem;
+            gap: 0.6rem;
+            padding: 0.7rem 1.8rem;
             border-radius: 3rem;
             font-weight: 600;
             border: none;
@@ -259,7 +261,7 @@
         }
 
         .btn-primary {
-            background: var(--gold);
+            background: var(--chicken-gold);
             color: white;
             box-shadow: 0 4px 12px rgba(212, 140, 59, 0.25);
         }
@@ -271,119 +273,119 @@
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--gold);
-            color: var(--gold);
+            border: 2px solid var(--chicken-gold);
+            color: var(--chicken-gold);
         }
 
         .btn-outline:hover {
-            background: var(--gold);
+            background: var(--chicken-gold);
             color: white;
         }
 
         .hero-illustration {
-            font-size: 5.5rem;
-            color: var(--gold);
-            opacity: 0.55;
+            font-size: 6rem;
+            color: var(--chicken-gold);
+            opacity: 0.6;
             text-align: center;
-            flex: 0 0 140px;
+            flex: 0 0 160px;
         }
 
         /* ===== section titles ===== */
         .section-title {
             text-align: center;
-            margin: 2rem 0 1.4rem;
+            margin: 2.2rem 0 1.6rem;
         }
 
         .section-title h2 {
-            font-size: 1.9rem;
+            font-size: 2rem;
             font-weight: 600;
-            color: var(--dark);
+            color: var(--chicken-dark);
         }
 
         .section-title p {
             color: #6d5c4b;
-            max-width: 460px;
+            max-width: 480px;
             margin: 0.2rem auto 0;
         }
 
         /* ===== categories ===== */
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 0.9rem;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 1rem;
         }
 
         .cat-card {
             background: white;
-            padding: 1.2rem 0.3rem;
+            padding: 1.4rem 0.4rem;
             border-radius: 2rem;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: var(--chicken-shadow);
             transition: 0.15s ease;
             border: 1px solid transparent;
             cursor: pointer;
         }
 
         .cat-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--gold);
+            transform: translateY(-5px);
+            border-color: var(--chicken-gold);
             box-shadow: 0 16px 28px rgba(212, 140, 59, 0.08);
         }
 
         .cat-card i {
-            font-size: 1.8rem;
-            color: var(--gold);
-            margin-bottom: 0.1rem;
+            font-size: 2rem;
+            color: var(--chicken-gold);
+            margin-bottom: 0.2rem;
         }
 
         .cat-card h4 {
             font-weight: 600;
-            font-size: 0.85rem;
-            color: var(--dark);
+            font-size: 0.9rem;
+            color: var(--chicken-dark);
         }
 
         /* ===== products ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-            gap: 1.6rem;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.8rem;
         }
 
         .product-card {
             background: white;
             border-radius: 1.8rem;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--chicken-shadow);
             transition: 0.15s ease;
             display: flex;
             flex-direction: column;
         }
 
         .product-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             box-shadow: 0 20px 32px rgba(80, 50, 20, 0.08);
         }
 
         .product-card img {
             width: 100%;
-            height: 160px;
+            height: 170px;
             object-fit: cover;
             background: #f7ede0;
         }
 
         .product-body {
-            padding: 0.7rem 0.9rem 0.3rem;
+            padding: 0.8rem 1rem 0.4rem;
             flex: 1;
         }
 
         .product-body h5 {
             font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--dark);
+            font-size: 1rem;
+            color: var(--chicken-dark);
         }
 
         .product-category {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             color: #7d6b5a;
             text-transform: uppercase;
             letter-spacing: 0.04em;
@@ -392,41 +394,41 @@
         .price-row {
             display: flex;
             align-items: baseline;
-            gap: 0.5rem;
-            margin-top: 0.3rem;
+            gap: 0.6rem;
+            margin-top: 0.4rem;
         }
 
         .price-current {
             font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--dark);
+            font-size: 1.15rem;
+            color: var(--chicken-dark);
         }
 
         .price-old {
             color: #a08977;
             text-decoration: line-through;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
         }
 
         .rating {
             color: #f4b942;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             letter-spacing: 0.04rem;
         }
 
         .product-footer {
-            padding: 0.3rem 0.9rem 0.9rem;
+            padding: 0.4rem 1rem 1rem;
             display: flex;
-            gap: 0.5rem;
+            gap: 0.6rem;
             align-items: center;
         }
 
         .add-btn {
             flex: 1;
-            background: var(--gold);
+            background: var(--chicken-gold);
             color: white;
             border: none;
-            padding: 0.45rem 0.2rem;
+            padding: 0.5rem 0.3rem;
             border-radius: 3rem;
             font-weight: 600;
             cursor: pointer;
@@ -435,7 +437,7 @@
             align-items: center;
             justify-content: center;
             gap: 0.3rem;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .add-btn:hover {
@@ -446,8 +448,8 @@
             background: transparent;
             border: 1px solid #e4d5c6;
             border-radius: 3rem;
-            width: 2.2rem;
-            height: 2.2rem;
+            width: 2.4rem;
+            height: 2.4rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -458,29 +460,29 @@
 
         .wish-btn:hover {
             background: #fef2e6;
-            border-color: var(--gold);
-            color: var(--accent);
+            border-color: var(--chicken-gold);
+            color: var(--chicken-accent);
         }
 
         /* ===== deal ===== */
         .deal-card {
             background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            border-radius: var(--chicken-radius);
+            box-shadow: var(--chicken-shadow);
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 1.2rem;
-            padding: 1.4rem 1.8rem;
-            margin: 1rem 0 2rem;
+            gap: 1.5rem;
+            padding: 1.6rem 2rem;
+            margin: 1.2rem 0 2.2rem;
         }
 
         .deal-card img {
             width: 100%;
-            max-width: 220px;
+            max-width: 250px;
             border-radius: 1.5rem;
             object-fit: cover;
-            height: 160px;
+            height: 180px;
             background: #f7ede0;
         }
 
@@ -489,27 +491,27 @@
         }
 
         .deal-content h3 {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 600;
         }
 
         .timer {
             display: flex;
-            gap: 0.5rem;
-            margin: 0.6rem 0;
+            gap: 0.6rem;
+            margin: 0.8rem 0;
         }
 
         .time-box {
-            background: var(--dark);
+            background: var(--chicken-dark);
             color: white;
-            padding: 0.25rem 0.6rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 1.2rem;
-            min-width: 48px;
+            min-width: 54px;
             text-align: center;
         }
 
         .time-box span {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
             display: block;
         }
@@ -517,14 +519,14 @@
         .deal-price {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .deal-price .current {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 700;
-            color: var(--gold);
+            color: var(--chicken-gold);
         }
 
         .deal-price .old {
@@ -535,16 +537,16 @@
         .deal-badge {
             background: #c97d2e;
             color: white;
-            padding: 0.1rem 0.9rem;
+            padding: 0.1rem 1rem;
             border-radius: 2rem;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         /* ===== testimonials ===== */
         .testimonial-scroll {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             overflow-x: auto;
             padding: 0.5rem 0.2rem 1.5rem;
             scroll-snap-type: x mandatory;
@@ -552,10 +554,10 @@
 
         .testimonial {
             background: white;
-            padding: 1.3rem;
+            padding: 1.4rem;
             border-radius: 2rem;
-            min-width: 220px;
-            box-shadow: var(--shadow);
+            min-width: 240px;
+            box-shadow: var(--chicken-shadow);
             scroll-snap-align: start;
         }
 
@@ -567,19 +569,18 @@
         .testimonial p {
             font-style: italic;
             color: #3e3329;
-            font-size: 0.95rem;
         }
 
         .testimonial .author {
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            margin-top: 0.5rem;
+            margin-top: 0.6rem;
         }
 
         .testimonial .author img {
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
             background: #e4d5c6;
@@ -587,44 +588,44 @@
 
         /* ===== newsletter ===== */
         .newsletter-box {
-            background: var(--dark);
+            background: var(--chicken-dark);
             color: white;
-            border-radius: var(--radius);
-            padding: 1.8rem 1.6rem;
+            border-radius: var(--chicken-radius);
+            padding: 2rem 1.8rem;
             text-align: center;
-            margin: 1.6rem 0;
+            margin: 1.8rem 0;
         }
 
         .newsletter-box h3 {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 600;
         }
 
         .newsletter-box p {
             opacity: 0.8;
-            margin-bottom: 0.9rem;
+            margin-bottom: 1rem;
         }
 
         .newsletter-form {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.6rem;
         }
 
         .newsletter-form input {
-            padding: 0.65rem 1.2rem;
+            padding: 0.7rem 1.4rem;
             border-radius: 3rem;
             border: none;
-            min-width: 200px;
-            font-size: 0.95rem;
+            min-width: 210px;
+            font-size: 1rem;
         }
 
         .newsletter-form button {
-            background: var(--gold);
+            background: var(--chicken-gold);
             color: white;
             border: none;
-            padding: 0.65rem 1.8rem;
+            padding: 0.7rem 1.8rem;
             border-radius: 3rem;
             font-weight: 600;
             cursor: pointer;
@@ -637,19 +638,19 @@
 
         /* ===== footer ===== */
         .footer {
-            padding: 1.6rem 0 1rem;
+            padding: 1.8rem 0 1.2rem;
             border-top: 1px solid #e4d5c6;
-            margin-top: 1.6rem;
+            margin-top: 1.8rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
         }
 
@@ -660,18 +661,18 @@
         }
 
         .footer-links a:hover {
-            color: var(--gold);
+            color: var(--chicken-gold);
         }
 
         .footer-social i {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-left: 0.6rem;
             color: #6d5c4b;
             transition: 0.15s ease;
         }
 
         .footer-social i:hover {
-            color: var(--gold);
+            color: var(--chicken-gold);
         }
 
         /* ===== responsive ===== */
@@ -694,7 +695,7 @@
                 margin-right: auto;
             }
             .hero-illustration {
-                font-size: 3.8rem;
+                font-size: 4rem;
             }
             .deal-card {
                 flex-direction: column;
@@ -722,11 +723,11 @@
 
 <header class="header">
     <div class="container header-inner">
-        <div style="display:flex;align-items:center;gap:0.5rem;">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
             <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
             <div class="brand">
                 <i class="fas fa-drumstick-bite"></i>
-                Crispy<span>Coop</span>
+                Cluck<span>&Crisp</span>
             </div>
         </div>
 
@@ -817,8 +818,8 @@
                     <span class="old">$34.99</span>
                     <span class="deal-badge">-28%</span>
                 </div>
-                <p style="margin:0.3rem 0 0.2rem;"><strong>8</strong> buckets left</p>
-                <button class="btn btn-primary" id="buyDeal" style="margin-top:0.4rem;"><i class="fas fa-bolt"></i> Grab deal</button>
+                <p style="margin:0.4rem 0 0.2rem;"><strong>8</strong> buckets left</p>
+                <button class="btn btn-primary" id="buyDeal" style="margin-top:0.5rem;"><i class="fas fa-bolt"></i> Grab deal</button>
             </div>
         </div>
     </section>
@@ -835,7 +836,7 @@
                 <p>“Best fried chicken I’ve had in years. So crispy and juicy!”</p>
                 <div class="author">
                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Ava">
-                    <div><strong>Ava</strong><br><span style="font-size:0.75rem;color:#6d5c4b;">verified</span></div>
+                    <div><strong>Ava</strong><br><span style="font-size:0.8rem;color:#6d5c4b;">verified</span></div>
                 </div>
             </div>
             <div class="testimonial">
@@ -843,7 +844,7 @@
                 <p>“Super fast delivery and the seasoning is perfect.”</p>
                 <div class="author">
                     <img src="https://images.unsplash.com/photo-1546456073-6712f79251bb?auto=format&fit=crop&w=80&q=80" alt="Mike">
-                    <div><strong>Mike</strong><br><span style="font-size:0.75rem;color:#6d5c4b;">regular</span></div>
+                    <div><strong>Mike</strong><br><span style="font-size:0.8rem;color:#6d5c4b;">regular</span></div>
                 </div>
             </div>
             <div class="testimonial">
@@ -851,7 +852,7 @@
                 <p>“The spicy tenders are addictive. Already ordered again!”</p>
                 <div class="author">
                     <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Sophia">
-                    <div><strong>Sophia</strong><br><span style="font-size:0.75rem;color:#6d5c4b;">new fan</span></div>
+                    <div><strong>Sophia</strong><br><span style="font-size:0.8rem;color:#6d5c4b;">new fan</span></div>
                 </div>
             </div>
         </div>
@@ -870,10 +871,10 @@
 </main>
 
 <footer class="container footer">
-    <div style="display:flex;align-items:center;gap:0.5rem;">
-        <i class="fas fa-drumstick-bite" style="color:var(--gold);font-size:1.5rem;"></i>
-        <span style="font-weight:600;font-size:1.1rem;">CrispyCoop</span>
-        <span style="color:#6d5c4b;font-size:0.8rem;margin-left:0.3rem;">© <span id="year"></span></span>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+        <i class="fas fa-drumstick-bite" style="color:var(--chicken-gold);font-size:1.6rem;"></i>
+        <span style="font-weight:600;font-size:1.2rem;">Cluck&Crisp</span>
+        <span style="color:#6d5c4b;font-size:0.85rem;margin-left:0.4rem;">© <span id="year"></span></span>
     </div>
     <div class="footer-links">
         <a href="#">About</a>
