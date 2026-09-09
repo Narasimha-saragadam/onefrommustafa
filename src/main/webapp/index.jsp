@@ -18,7 +18,7 @@
             font-family: "Inter", system-ui, sans-serif;
             background: #fefcf5;
             color: #2d2a24;
-            line-height: 1.5;
+            line-height: 1.8;
             padding: 0 1rem;
         }
 
