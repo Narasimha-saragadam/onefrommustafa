@@ -735,18 +735,18 @@
 <header class="header">
     <div class="container header-inner">
         <div style="display:flex;align-items:center;gap:0.8rem;">
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><em class="fas fa-bars"></em></button>
             <div class="brand">
-                <i class="fas fa-seedling"></i>
+                <em class="fas fa-seedling"></em>
                 Bloom<span>Shop</span>
             </div>
         </div>
 
         <nav class="nav-links" id="navLinks">
-            <a href="#"><i class="fas fa-home"></i> Home</a>
-            <a href="#categories"><i class="fas fa-th-large"></i> Categories</a>
-            <a href="#products"><i class="fas fa-fire"></i> Trending</a>
-            <a href="#deals"><i class="fas fa-tag"></i> Deals</a>
+            <a href="#"><em class="fas fa-home"></i> Home</a>
+            <a href="#categories"><em class="fas fa-th-large"></i> Categories</a>
+            <a href="#products"><em class="fas fa-fire"></i> Trending</a>
+            <a href="#deals"><em class="fas fa-tag"></i> Deals</a>
         </nav>
 
         <div class="header-actions">
