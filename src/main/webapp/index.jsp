@@ -751,10 +751,10 @@
 
         <div class="header-actions">
             <div class="search-wrap">
-                <input type="search" id="searchInput" placeholder="Search..." aria-label="Search">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <emnput type="search" id="searchInput" placeholder="Search..." aria-label="Search">
+                <button id="searchBtn"><em class="fas fa-search"></i></button>
             </div>
-            <button class="icon-btn" aria-label="Account"><i class="far fa-user"></i></button>
+            <button class="icon-btn" aria-label="Account"><em class="far fa-user"></em></button>
             <button class="icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i></button>
             <button class="icon-btn" id="cartBtn" aria-label="Cart">
                 <i class="fas fa-shopping-bag"></i>
