@@ -18,7 +18,7 @@
             font-family: "Inter", system-ui, -apple-system, sans-serif;
             background: #fafcfd;
             color: #1a2e3f;
-            line-height: 1.2;
+            line-height: 0.8;
             padding: 0 1rem;
         }
 
