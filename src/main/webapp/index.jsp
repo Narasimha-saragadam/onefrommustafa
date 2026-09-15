@@ -723,9 +723,9 @@
 <header class="header">
     <div class="container header-inner">
         <div style="display:flex;align-items:center;gap:0.5rem;">
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><em class="fas fa-bars"></em></button>
             <div class="brand">
-                <i class="fas fa-drumstick-bite"></i>
+                <em class="fas fa-drumstick-bite"></em>
                 Crispy<span>Coop</span>
             </div>
         </div>
